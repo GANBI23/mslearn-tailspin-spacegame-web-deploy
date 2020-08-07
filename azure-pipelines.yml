@@ -8,7 +8,7 @@ variables:
 schedules:
 - cron: '0 3 * * *'
   displayName: Deploy every day at 3 A.M.
-  branches":
+  branches:
     include:
     - release
   always:  false
@@ -126,4 +126,3 @@ stages:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: '$(WebAppNameTest)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
-              
